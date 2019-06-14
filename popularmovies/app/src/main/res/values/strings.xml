@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Popular Movies</string>
+    <string name="original_title">Original Title</string>
+    <string name="poster">Movie Poster</string>
+
+    <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="ScrollingViewBehavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="clear_favourites">Clear Favourites</string>
+    <string name="show_favourites">Show Favourites</string>
+    <string name="sort_by_ratings">Sort by ratings</string>
+    <string name="sort_by_popularity">Sort by popularity</string>
+    <string name="movie_backdrop_images">Movie Backdrop Images</string>
+    <string name="trailers">Trailers</string>
+    <string name="movie_trailers">Movie Trailers</string>
+    <string name="reviews">Reviews</string>
+    <string name="favourites">Favourites</string>
+</resources>
+
+

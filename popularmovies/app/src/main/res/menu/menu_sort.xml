@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/mnu_popular"
+        android:title="@string/sort_by_popularity"
+        android:orderInCategory="1"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/mnu_rating"
+        android:orderInCategory="2"
+        android:title="@string/sort_by_ratings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/mnu_show_favourites"
+        android:orderInCategory="3"
+        android:title="@string/show_favourites"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/mnu_clear_favourites"
+        android:orderInCategory="4"
+        android:title="@string/clear_favourites"
+        app:showAsAction="never" />
+</menu>
