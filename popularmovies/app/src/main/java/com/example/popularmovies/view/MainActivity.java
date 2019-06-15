@@ -113,6 +113,7 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.onMo
             public void onResponse(Call<MovieResults> call, Response<MovieResults> response) {
                 if (response.body() != null) {
                     List<Movie> movies = response.body().getMovies();
+                    movieInstance.clear();
                     movieInstance.addAll(movies);
                     movieRecyclerView.setAdapter(new MovieAdapter(posterSize,MainActivity.this,movieInstance));
                 }
@@ -163,24 +164,13 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.onMo
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.mnu_popular:
-                if(orderBy ==SORT_POPULAR)
-                {
-                    showMovies();
-                }
-                else {
+
                     orderBy = SORT_POPULAR;
                     initialSetup(orderBy);
-                }
                 break;
             case R.id.mnu_rating:
-                if(orderBy == SORT_RATING)
-                {
-                    showMovies();
-                }
-                else {
                     orderBy = SORT_RATING;
                     initialSetup(orderBy);
-                }
                 break;
             case R.id.mnu_show_favourites:
                 loadFavourites();
@@ -202,7 +192,10 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.onMo
             @Override
             public void onChanged(List<Movie> movies) {
                 if(movies !=null){
-                    movieAdapter.setMovie(movies);
+                    movieInstance.clear();
+                    movieInstance.addAll(movies);
+                    showMovies();
+                    //movieAdapter.notifyDataSetChanged();
                     progressBar.setVisibility(View.GONE);
                     Toast.makeText(getApplicationContext(),"Favourite movie list loaded",Toast.LENGTH_LONG);
                 }
